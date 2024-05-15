@@ -1,4 +1,4 @@
-
+// COUNTER TASK
 const decreaseBtn = document.querySelector('.decrease-btn');
 const increaseBtn = document.querySelector('.increase-btn');
 const counter = document.querySelector('.increase-decrease');
@@ -30,3 +30,39 @@ function decreaseCounter (){
     }
 }
 
+// TASK BLOCK
+
+const titleInput = document.getElementById('title');
+const bodyInput = document.getElementById('body');
+const ratingInput = document.getElementById('rating');
+const authorInput = document.getElementById('author');
+const submitButton = document.querySelector('.form-comment-button');
+const comments = [];
+// console.log(submitButton);
+// console.log(titleInput);
+submitButton.addEventListener("click", ()=>{
+    const title = titleInput.value.trim();
+    const body = bodyInput.value.trim();
+    const rating = parseInt(ratingInput.value);
+    const author = authorInput.value.trim();
+
+    if(title && body && !isNaN(rating) && author){
+        const comment = {
+            id: comments.length + 1,
+            title,
+            body,
+            rating,
+            author
+        };
+        comments.push(comment);
+
+        titleInput.value = '';
+        ratingInput.value = '';
+        bodyInput.value = '';
+        authorInput.value = '';
+
+        console.log(`Массив с комментариями:`, comments)
+    } else {
+        alert("Пожалуйста, заполните все поля корректно.");
+    }
+});
