@@ -42,10 +42,10 @@
 
                 <div class="task-block">
                     <div class="form-comment">
-                        <input type="text" class="form-comment-input" name="title" placeholder="Введите заголовок комментария" id="title">
-                        <input type="text" class="form-comment-input" name="body" placeholder="Введите ваше сообщение" id="body">
-                        <input type="text" class="form-comment-input" name="rating" placeholder="Введите рейтинг доверия" id="rating">
-                        <input type="text" class="form-comment-input" name="author" placeholder="Введите ваше имя" id="author">
+                        <input type="text" class="form-comment-input" placeholder="Введите заголовок комментария" id="title">
+                        <input type="text" class="form-comment-input" placeholder="Введите ваше сообщение" id="body">
+                        <input type="text" class="form-comment-input" placeholder="Введите рейтинг доверия" id="rating">
+                        <input type="text" class="form-comment-input" placeholder="Введите ваше имя" id="author">
                         <button class="form-comment-button">Отправить комментарий</button>
                     </div>
                 </div>
@@ -57,8 +57,8 @@
                     <p class="task-description">Создать схожую верстку: карточки с комментариями, а также форму для вывода комментариев, которая содержит: четыре поля и кнопку. Новые комментарии добавляются в конце уже созданных комментариев. Форма создания комментариев дублирует функционал предыдущего задания, с добавлением следующего, нового функционала: если строка с сообщением (свойство body) больше 55 символов, обрезать ее и вставить в конце три точки; провести проверку поля автора, если комментарий с таким же автором уже был написан, изменить рейтинг доверия на "5".</p>
                 </div>
 
-                <div class="comments">
-                    <div class="comment">
+                <div class="comments" id="comments">
+                    <div class="comment" id="comment">
                         <p class="comment-title">Lorem ipsum dolor sit amet.</p>
                         <p class="comment-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto cupiditate deleniti est non quos ullam.</p>
                         <div class="comment-info">
@@ -134,11 +134,11 @@
 
                 <div class="task-block">
                     <div class="comment-form">
-                        <input type="text" class="comment-form-input" name="title" placeholder="Введите заголовок комментария">
-                        <input type="text" class="comment-form-input" name="body" placeholder="Введите ваше сообщение">
-                        <input type="text" class="comment-form-input" name="rating" placeholder="Введите рейтинг доверия">
-                        <input type="text" class="comment-form-input" name="author" placeholder="Введите ваше имя">
-                        <button class="comment-form-button">Send Comment</button>
+                        <input type="text" class="comment-form-input" name="title" placeholder="Введите заголовок комментария" id="title2">
+                        <input type="text" class="comment-form-input" name="body" placeholder="Введите ваше сообщение" id="body2">
+                        <input type="text" class="comment-form-input" name="rating" placeholder="Введите рейтинг доверия" id="rating2">
+                        <input type="text" class="comment-form-input" name="author" placeholder="Введите ваше имя" id="author2">
+                        <button class="comment-form-button" id="comment-button">Send Comment</button>
                     </div>
                 </div>
             </section>
