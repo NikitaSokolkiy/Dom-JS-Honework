@@ -147,7 +147,7 @@ const newsArray = [
     {
         userId: 2,
         id: 4,
-        title: "Заголовок для Алекса2",
+        title: "Заголовок для Анны",
         author: 'Anna',
         body: "Текст для Анны"
     },
@@ -168,6 +168,7 @@ getPostBtn.addEventListener('click', () => {
 });
 const getSortBtn = document.querySelector('.sort-title');
 getSortBtn.addEventListener("click", ()=>{
+    document.querySelector('.news').innerHTML = '';
     const newsArraySort = newsArray.sort((a, b) => {
         if (a.author > b.author){
             return -1
@@ -208,8 +209,30 @@ selectNameBtn.addEventListener("change", ()=>{
     });
 
 })
-const deleteBtn = document.querySelector('.delete-all');
 
+const deleteBtn = document.querySelector('.delete-all');
 deleteBtn.addEventListener('click', ()=>{
     document.querySelector('.news').innerHTML = '';
 })
+
+
+const accordionItems = document.querySelectorAll('.accordion__question-block');
+console.log(accordionItems);
+accordionItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        const answer = parent.querySelector('.accordion__answer');
+
+        if (answer.style.height === '0px' || answer.style.height === '') {
+            answer.style.height = 'auto';
+            answer.style.opacity = '1';
+            answer.style.visibility = 'visible';
+            item.classList.add('accordion__question-block_active');
+        } else {
+            answer.style.height = '0';
+            answer.style.opacity = '0';
+            answer.style.visibility = 'hidden';
+            item.classList.remove('accordion__question-block_active');
+        }
+    });
+});
